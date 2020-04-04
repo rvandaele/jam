@@ -23,7 +23,7 @@ with sys.stdin as F:
             while index < index_end:
                 tab = lines[index].rstrip('\n').split(' ')
                 taches.append((int(tab[0]), int(tab[1])))
-                fins.append(int(tab[1]))
+                fins.append(int(tab[0]))
                 index = index+1
 
             C = np.zeros(24*60).astype('bool')
