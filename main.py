@@ -1,7 +1,7 @@
 import sys
 import numpy as np
 
-with sys.stdin as F:
+with open('file.txt') as F:
     lines = F.readlines()
     i = 1
     CASE = 1
@@ -12,7 +12,7 @@ with sys.stdin as F:
         mat = np.zeros((N, N))
         i += 1
         k = 0
-        while i < i + N:
+        while k <  N:
             j = 0
             tab = lines[i].rstrip('\n').split(' ')
             for j in range(N):
@@ -28,7 +28,7 @@ with sys.stdin as F:
             H_LIN = {}
             for k in range(N):
                 H_COL[mat[j, k]] = 1
-                H_COL[mat[k, j]] = 1
+                H_LIN[mat[k, j]] = 1
             if len(H_COL.keys()) != N:
                 COLBAD += 1
             if len(H_LIN.keys()) != N:
