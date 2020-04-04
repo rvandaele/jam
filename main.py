@@ -1,7 +1,7 @@
 import sys
 import numpy as np
 
-with open('file.txt') as F:
+with sys.stdin as F:
     lines = F.readlines()
     i = 1
     CASE = 1
@@ -33,5 +33,5 @@ with open('file.txt') as F:
                 COLBAD += 1
             if len(H_LIN.keys()) != N:
                 LINBAD += 1
-        print('Case #%d: %d %d %d' % (CASE, trace, LINBAD, COLBAD))
+        print('Case #%d: %d %d %d' % (CASE, trace, COLBAD, LINBAD))
         CASE += 1
